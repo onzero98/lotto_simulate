@@ -138,15 +138,15 @@ MAIN_HTML = '''
 
         <div class="col-xs-5 col-xs-offset-1">
             <div class="jumbotron cash-div">
-                <b>당첨 금액</b>
-                <span>‎₩{total_prize}</span>
+                <b>당첨 금액 </b>
+                <span>‎₩ {total_prize} 원</span>
             </div>
         </div>
 
         <div class="col-xs-5">
             <div class="jumbotron cash-div">
-                <b>쓴 금액</b>
-                <span>‎₩{total_cost}</span>
+                <b>쓴 금액 </b>
+                <span>‎₩ {total_cost} 원</span>
             </div>
         </div>
 
@@ -222,7 +222,7 @@ def generate_attempt_html(attempt, winning_numbers):
             {attempt}
         </div>
         <div class="attempt-prize">
-            ‎₩{prize}
+            ‎₩ {prize}
         </div>
     </div>
     '''.format(attempt=attempt_html, prize=attempt[1])
