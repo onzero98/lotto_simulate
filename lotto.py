@@ -1,5 +1,6 @@
 from random import randint
 
+# 번호 뽑기
 def generate_numbers(n):
     numbers = []
 
@@ -11,14 +12,16 @@ def generate_numbers(n):
 	
     numbers.sort()
     return numbers
-
+	
+#당첨 번호 뽑기
 def gacha():
     gacha = generate_numbers(7)
 
     # 6개의 일반 당첨 번호 + 1개의 보너스 번호
     result = sorted(gacha[:6]) + gacha[6:]
     return result
-
+	
+#겹치는 번호 개수 확인
 def count_matches(numbers, win_numbers):
     count = 0
 
@@ -27,7 +30,8 @@ def count_matches(numbers, win_numbers):
             count += 1
 
     return count
-
+	
+#당첨금 확인
 def check_prize(numbers, win_numbers):
     count = count_matches(numbers, win_numbers[:6])
     bonus = count_matches(numbers, win_numbers[6:])
